@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casa da Pesquisa</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="imagens/logo.jpg" alt="logo" />
+      </a>
+    
+      <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">sobre</a>
+        <a href="#Clientes">Clientes</a>
+        <a href="#Equipe">Equipe</a>
+        <a href="#Serviços">Serviços</a>
+        <a href="#Contato">Contato</a>
+    
+        <!-- Ícone do WhatsApp -->
+        <a href="https://wa.me/5519991225858 = Olá, Gostaria de mais informaçoes" target="_blank" class="whatsapp-icon">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </nav>
+    </header>
+    
+      
+    </header>
+
+    <!--HOME-->
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Particles.js com Casa da Pesquisa</title>
+      <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+      <style>
+        /* Reset básico e full height */
+        body, html { margin: 0; height: 100%; font-family: Arial, sans-serif; }
+    
+        /* Estilos da seção home */
+        .home {
+          position: relative;
+          width: 100%;
+          height: 100vh; /* Altura total da tela para a seção home */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          color: white;
+        }
+    
+        /* Contêiner do conteúdo (titulo e botão) */
+        .content {
+          position: relative;
+          z-index: 10; /* Faz com que o conteúdo fique sobre as partículas */
+        }
+    
+        h3 {
+          font-size: 3rem;
+          margin-bottom: 20px;
+        }
+    
+        .btn {
+          padding: 10px 20px;
+          background-color: #e0af0e;
+          color: rgb(17, 13, 13);
+          text-decoration: none;
+          font-size: 1.2rem;
+          border-radius: 5px;
+          transition: background-color 0.3s;
+        }
+    
+        .btn:hover {
+          background-color: #f7f8fa;
+        }
+    
+        /* Estilo das partículas */
+        #particles-js {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%; /* Partículas ocuparão 100% da altura da seção home */
+          z-index: 1; /* Fica atrás do conteúdo */
+        }
+      </style>
+    </head>
+    <body>
+    
+      <!-- Seção home -->
+      <section class="home" id="home">
+        <!-- Partículas JS -->
+        <div id="particles-js"></div>
+    
+        <!-- Conteúdo principal -->
+        <div class="content">
+          <h3>Casa da Pesquisa</h3>
+          <a href="#" class="btn">Conheça quem somos</a>
+        </div>
+      </section>
+    
+      <script>
+        // Inicialização do Particles.js com as configurações padrão
+        particlesJS("particles-js", {
+          particles: {
+            number: { value: 170, density: { enable: true, value_area: 800 } },
+            color: { value: "#ffffff" },
+            shape: { type: "circle" },
+            opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1 } },
+            size: { value: 3, random: true, anim: { enable: true, speed: 40 } },
+            line_linked: { enable: true, distance: 150, color: "#00baff", opacity: 0.4, width: 1 },
+            move: { enable: true, speed: 6, random: true, out_mode: "out" }
+          },
+          interactivity: {
+            events: {
+              onhover: { enable: true, mode: "repulse" },
+              onclick: { enable: true, mode: "push" }
+            }
+          },
+          retina_detect: true,
+          background: {
+            color: "#ffffff"  // COR CORRETA DE FUNDO
+          }
+        });
+      </script>
+    
+    </body>
+    </html>
+    
+
+    
+    <! -- SOBRE/ABOUT -->
+    <section class="about" id="about">
+      <h1 class="heading"><span>Sobre</span> nós</h1>
+
+      <div class="row"> 
+      <div class="image">
+        <img src="imagens/quem-somos.jpg"alt="sobre nós">
+      </div>
+
+      <div class="content">
+        <h3>O que torna a Casa da Pesquisa Eficaz?</h3>
+        <p>Casa da pesquisa desde 1993 no mercado de pesquisas quantitativas e qualitativas de alto nível no estado de São Paulo e Minas Gerais, com sede em Campinas-SP.
+          Nossos estudos são conduzidos com integridade, usando a tecnologia como aliada,  buscamos a essência dos dados com honestidade e cuidado, com uma grande gama de parceiros ao longo desses anos, em diversos setores.
+        <p>Nossos Clientes nos buscam atras de performace, para entregar alem do espero com seus produtos inovadores.</p>
+        <a href="#" class="btn">Saiba mais</a>
+      </div>
+    </section>
+
+
+    <! --NOSSOS CLIENTES -->
+    <section class="Clientes" id="Clientes">
+      <h1 class="heading"><span>Nossos</span> clientes</h1>
+    
+      <div class="box-container">
+        <div class="box">
+          <img src="imagens/takasago.png" alt="takasago">
+        </div>
+    
+        <div class="box">
+          <img src="imagens/jaguar.png" alt="jaguar">
+        </div>
+
+        <div class="box">
+          <img src="imagens/pizza-hut.jpg" alt="pizza hut">
+        </div>
+
+        <div class="box">
+          <img src="imagens/samar.jpg" alt="samar">
+        </div>
+
+        <div class="box">
+          <img src="imagens/sakata2.jpg" alt="sakata2">
+        </div>
+
+        <div class="box">
+          <img src="imagens/solvi.jpg" alt="solvi">
+        </div>
+
+        <div class="box">
+          <img src="imagens/sapore.jpg" alt="sapore">
+        </div>
+
+        <div class="box">
+          <img src="imagens/ems.png" alt="ems">
+        </div>
+
+        <div class="box">
+          <img src="imagens/sanasa.jpg" alt="sanasa">
+        </div>
+
+        <div class="box">
+          <img src="imagens/3m.png" alt="3m">
+        </div>
+
+        <div class="box">
+          <img src="imagens/dpaschoal.jpg" alt="dpaschoal">
+        </div>
+
+        <div class="box">
+          <img src="imagens/tecam.jpg" alt="tecam">
+        </div>
+
+        <div class="box">
+          <img src="imagens/dotz.png" alt="dotz">
+        </div>
+
+        <div class="box">
+          <img src="imagens/prefeitura-de-guarulhos.jpg" alt="prefeitura de guarulhos">
+        </div>
+
+        <div class="box">
+          <img src="imagens/prefeitura-hortolandia.png" alt="prefeitura hortolandia">
+        </div>
+
+        <div class="box">
+          <img src="imagens/prefeitura-sao-jose-dos-campos.png" alt="prefeitura sao jose dos campos">
+        </div>
+
+        <div class="box">
+          <img src="imagens/prefeitura-de-campinas.png" alt="prefeitura de campinas">
+        </div>
+
+        <div class="box">
+          <img src="imagens/prefeitura-paulinia.jpg" alt="prefeitura paulinia">
+        </div>
+
+        <div class="box">
+          <img src="imagens/prefeitura-ribeirao-preto.png" alt="prefeitura ribeirao">
+        </div>
+
+        <div class="box">
+          <img src="imagens/governo-sergipe.png" alt="governo sergipe">
+        </div>
+
+        <div class="box">
+          <img src="imagens/prefeitura-de-atibaia.webp" alt="prefeitura de atibaia">
+        </div>
+
+        <div class="box">
+          <img src="imagens/prefeitura-bragança-paulista.jpg" alt="prefeitura bragança paulista">
+        </div>
+
+        <div class="box">
+          <img src="imagens/prefeitura-de-pouso-alegre.png" alt="prefeitura de pouso alegre">
+        </div>
+
+        <div class="box">
+          <img src="imagens/prefeitura-de-jundiai.png" alt="prefeitura de jundiai">
+        </div>
+      </div>
+    </section>
+    
+    <! -- Equipe -->
+    
+    <section class="Equipe" id="Equipe">
+      <h1 class="heading">Nossa <span>Equipe</span></h1>
+      <img src="imagens/equipe-grupo.png" alt="Sandra Regina">
+      <hr> <!-- Linha abaixo da imagem -->
+      <div class="content">
+          <div class="nome">
+              <h3>Carlos Araújo</h3> <!-- Nome -->
+              <div class="info">
+                  <p>Sociologia – Unicamp</p> <!-- Parágrafo 1 -->
+                  <p>Pós em Gestão Estratégica – Geociências Unicamp</p> <!-- Parágrafo 2 -->
+              </div>
+          </div>
+  
+          <div class="nome">
+              <h3>Sandra Regina</h3> <!-- Nome -->
+              <div class="info">
+                  <p>Administradora – PUC</p> <!-- Parágrafo 1 -->
+              </div>
+          </div>
+
+
+          <div class="nome">
+            <h3>Lucas Brenner Pimenta</h3> <!-- Nome -->
+            <div class="info">
+                <p>Diretor Comercial</p> <!-- Parágrafo 1 -->
+            </div>
+        </div>
+      </div>
+  </section>
+  
+  
+  <! -- REVIEW E AVALIAÇOES -->
+
+  <section class="Serviços" id="Serviços">
+    <h1 class="heading">Conheçam os <span>Nossos Serviços</span></h1>
+
+    <div class="carousel">
+        <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
+
+        <div class="carousel-container">
+            <div class="slide">
+                <h3>Pesquisa Qualitativa</h3>
+                <p>Analisamos a percepção dos consumidores de forma profunda.</p>
+            </div>
+            <div class="slide">
+                <h3>Pesquisa Quantitativa</h3>
+                <p>Coletamos dados estatísticos para embasar decisões estratégicas.</p>
+            </div>
+            <div class="slide">
+                <h3>Pesquisa de Mercado</h3>
+                <p>Ajudamos a entender as tendências do seu setor.</p>
+            </div>
+            <div class="slide">
+                <h3>Pesquisa de Satisfação</h3>
+                <p>Medimos a satisfação dos seus clientes para melhorias contínuas.</p>
+            </div>
+        </div>
+
+        <button class="next" onclick="mudarSlide(1)">&#10095;</button>
+    </div>
+
+    <button class="passar-carrossel" onclick="mudarSlide(1)">Próximo Serviço</button>
+</section>
+
+<!-- Adicione o JavaScript no final do corpo da página -->
+<script>
+let slideIndex = 0;
+
+function mudarSlide(direction) {
+    const slides = document.querySelectorAll(".slide");
+    const totalSlides = slides.length;
+
+    slideIndex += direction;
+
+    if (slideIndex >= totalSlides) {
+        slideIndex = 0; // Volta ao primeiro slide
+    } else if (slideIndex < 0) {
+        slideIndex = totalSlides - 1; // Vai para o último slide
+    }
+
+    const offset = -slideIndex * 100;
+    document.querySelector(".carousel-container").style.transform = `translateX(${offset}%)`;
+}
+
+// Troca automática a cada 5 segundos
+setInterval(() => {
+    mudarSlide(1);
+}, 5000);
+</script>
+
+<!-- FOOTER E RODAPÉ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-col">
+      <h4>Casa da Pesquisa</h4>
+      <p>Desde 1993 fornecendo pesquisas quantitativas e qualitativas de alto nível.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <p>Email: contato@casadapesquisa.com.br</p>
+      <p>Telefone: (19) 99122-5858</p>
+    </div>
+    <div class="footer-col">
+      <h4>Endereço</h4>
+      <div class="social-links">
+        <p>Rua Conceição, Sala 301 - Campinas,SP</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Casa da Pesquisa. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+    
+    
+
+  </body>
+</html>

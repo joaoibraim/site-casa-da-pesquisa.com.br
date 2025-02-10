@@ -1,0 +1,547 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --main-color: #e0af0e;
+  --bg: #13131a;
+  --bg-card: #080808;
+  --border: 0.1rem solid rgba(243, 243, 243, 0.226);
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+html ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html ::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 5rem;
+}
+
+body {
+  background: var(--bg);
+}
+
+section {
+  padding: 2rem 7%;
+}
+
+.heading {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 3.5rem;
+  font-size: 4rem;
+}
+
+.heading span {
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.9rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background: var(--main-color);
+  cursor: pointer;
+}
+
+.btn:hover {
+  letter-spacing: 0.2rem;
+}
+
+/* HEADER */
+.header {
+  background: var(--bg); /* Cor de fundo */
+  display: flex; /* Usando flexbox para organizar o conteúdo */
+  align-items: center; /* Alinha itens verticalmente */
+  justify-content: space-between; /* Espaço entre logo e navbar */
+  padding: 1.5rem 7%; /* Espaçamento nas laterais e no topo */
+  border-bottom: var(--border); /* Borda abaixo do cabeçalho */
+  position: fixed; /* Fixa o cabeçalho no topo */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Garante que o cabeçalho fique acima de outros conteúdos */
+  box-sizing: border-box; /* Garante que o padding não afete as dimensões do cabeçalho */
+}
+
+/* Logo no cabeçalho */
+.header .logo img {
+  height: 6.5rem; /* Altura do logo */
+  border-radius: 100%; /* Deixa o logo redondo */
+  object-fit: cover; /* Garante que a imagem se ajuste bem no espaço disponível */
+}
+
+/* Estilos para a barra de navegação */
+.header .navbar {
+  display: flex; /* Organiza os links na horizontal */
+  list-style: none; /* Remove os marcadores de lista */
+  justify-content: center;
+  flex-grow: 1; /* permitindo que os links fiquem no centro */
+}
+
+.header .navbar a {
+  margin: 0 1rem; /* Espaçamento entre os links */
+  font-size: 2.6rem; /* Tamanho da fonte dos links */
+  color: #fff; /* Cor dos links */
+  text-decoration: none; /* Remove o sublinhado */
+}
+
+.header .navbar a:hover {
+  color: var(--main-color); /* Cor ao passar o mouse */
+  border-bottom: 0.1rem solid var(--main-color); /* Linha de destaque ao passar o mouse */
+  padding-bottom: 0.5rem; /* Espaçamento extra para o efeito de hover */
+}
+
+/* Evitar sobreposição do conteúdo com o cabeçalho fixo */
+body {
+  padding-top: 7rem; /* Compensa a altura do cabeçalho */
+}
+
+/* Posicionamento do ícone do WhatsApp */
+.whatsapp-icon {
+  position: fixed; /* Fixa o ícone na tela */
+  bottom: 20px; /* Distância da parte inferior */
+  right: 20px; /* Distância da parte direita */
+  background-color: #25d366; /* Cor de fundo do ícone */
+  border-radius: 100%; /* Forma arredondada */
+  padding: 20px; /* Tamanho do ícone */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar destaque */
+  z-index: 9999; /* Garante que o ícone fique por cima de outros elementos */
+}
+
+.whatsapp-icon i {
+  color: white; /* Cor do ícone */
+  font-size: 45px; /* Tamanho do ícone */
+}
+
+.whatsapp-icon:hover {
+  background-color: #128c7e; /* Cor do fundo quando o mouse passa por cima */
+}
+
+/* HOME */
+.home {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background: url(./images/home.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-bottom: var(--border);
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.home .content {
+  max-width: 60rem;
+  position: relative;
+  z-index: 2;
+}
+
+.home .content h3 {
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.home .content p {
+  font-size: 2rem;
+  font-weight: lighter;
+  line-height: 1.8;
+  padding: 1rem 0;
+  color: #fff;
+}
+
+/* ABOUT / SOBRE NÓS*/
+.about .row {
+  display: flex;
+  align-items: normal;
+  background: var(--bg-card);
+  flex-wrap: wrap;
+  border: var(--border);
+}
+
+.about .row .image {
+  flex: 1 1 45rem;
+}
+
+.about .row .image img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 45rem;
+  padding: 1rem;
+}
+
+.about .row .content h3 {
+  font-size: 3rem;
+  color: #fff;
+  flex-grow: 1;
+}
+
+.about .row .content p {
+  font-size: 1.6rem;
+  color: #ccc;
+  padding: 1rem 0;
+  line-height: 2.5rem;
+}
+
+/* MENU */
+.Clientes .box-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(20rem, 1fr)
+  ); /* Ajusta os boxes automaticamente */
+  gap: 1rem; /* Espaçamento entre os boxes */
+  padding: 2rem;
+  justify-content: flex-start;
+  border-bottom: var(--border);
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+  border: var(--border);
+  background: #fff;
+  width: 20rem; /* Largura fixa */
+  height: 16rem; /* Altura fixa para uniformidade */
+  overflow: hidden; /* Evita que a imagem ultrapasse o box */
+  transition: transform 0.3s ease-in-out; /* Adiciona transição suave */
+}
+
+/* Expansão do box ao passar o mouse */
+.Clientes .box-container .box:hover {
+  transform: scale(1.05); /* Expande o box em 2% */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra */
+}
+
+.Clientes .box-container .box img {
+  width: 100%; /* A imagem se ajusta ao box */
+  height: 80%; /* Mantém uma proporção adequada */
+  object-fit: contain; /* Garante que a imagem fique bem ajustada sem distorcer */
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out; /* Efeito de transição suave */
+}
+
+/* Expansão da imagem ao passar o mouse */
+.Clientes .box-container .box:hover img {
+  transform: scale(1.1); /* Aumenta a imagem em 5% */
+}
+
+/* EQUIPE */
+
+/* Seção da equipe */
+.Equipe {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #4140407a; /* Cor de fundo para destacar o conteúdo */
+  border-bottom: var(--border);
+}
+
+/* Título principal */
+.Equipe .heading {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.Equipe .heading span {
+  color: #e7ab3c;
+}
+
+/* Ajustes na imagem para ser centralizada e com tamanho regulável */
+.Equipe img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px; /* Máxima largura de 400px */
+  min-width: 200px; /* Largura mínima de 200px */
+  height: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Linha abaixo da imagem */
+.Equipe hr {
+  width: 90%;
+  margin: 20px auto;
+  border: 0;
+  border-top: 2px solid #f8c025;
+}
+
+/* Layout com flexbox */
+.Equipe .content {
+  display: flex;
+  justify-content: center; /* Alinha os itens horizontalmente no centro */
+  gap: 120px; /* Espaçamento entre os itens */
+  flex-wrap: wrap; /* Quebra a linha se o espaço não for suficiente (responsividade) */
+}
+
+/* Estilos para o nome */
+.Equipe .content .nome {
+  text-align: center; /* Centraliza o nome */
+}
+
+.Equipe .content h3 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-top: 0; /* Remove a margem superior */
+  margin-bottom: 10px; /* Adiciona um pequeno espaço abaixo */
+}
+
+/* Estilos para os parágrafos */
+.Equipe .content .info p {
+  color: #fff;
+  font-size: 1.6rem;
+  margin: 5px 0;
+  text-align: center; /* Centraliza o texto dos parágrafos */
+}
+
+/* Serviços*/
+
+/* Estilos da seção */
+.Serviços {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #222;
+  border-bottom: var(--border);
+}
+
+/* Título */
+.Serviços .heading {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.Serviços .heading span {
+  color: #e7ab3c;
+}
+
+/* Carrossel */
+.carousel {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Container dos slides */
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Estilo de cada slide */
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  background-color: #333;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Imagens dos serviços */
+.slide img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Título do serviço */
+.slide h3 {
+  font-size: 2.6rem;
+  color: #e7ab3c;
+  margin-top: 1rem;
+}
+
+/* Texto do serviço */
+.slide p {
+  font-size: 1.9rem;
+  color: #fff;
+  margin-top: 0.5rem;
+}
+
+/* Botões de navegação */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 2rem;
+  border-radius: 50%;
+}
+
+/* Posicionamento dos botões */
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+/* Efeito ao passar o mouse nos botões */
+.prev:hover,
+.next:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+}
+
+/* Novo botão de "Próximo Serviço" */
+.passar-carrossel {
+  background-color: #e7ab3c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.passar-carrossel:hover {
+  background-color: #d69a2b;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .carousel {
+    width: 100%;
+  }
+
+  .prev,
+  .next {
+    font-size: 1.5rem;
+    padding: 8px 12px;
+  }
+
+  .passar-carrossel {
+    font-size: 1.2rem;
+    padding: 8px 15px;
+  }
+}
+
+.heading-footer {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.heading-footer span {
+  color: var(--main-color);
+}
+
+/* Rodapé */
+/* Rodapé */
+.footer {
+  background-color: #b8b5b5;
+  color: #000000;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-col h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+/* Ajuste no tamanho da fonte dos parágrafos */
+.footer-col p {
+  font-size: 16px; /* Ajuste o tamanho conforme necessário */
+  line-height: 1.5;
+  color: #333;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: #444;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #e0af0e;
+}
+
+/* Copyright */
+.footer .copyright {
+  margin-top: 30px;
+  font-size: 16px;
+  color: #1b1b1b;
+}
